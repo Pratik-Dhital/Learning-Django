@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block start %}
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A nulla dolorum numquam, molestiae saepe facere cumque
+    explicabo enim, facilis dolor qui, corporis atque ipsa! Nesciunt doloribus quisquam doloremque illum obcaecati.
+</p>
+
+{{peoples}}
+
+<table class="container">
+    <tr>
+        <th>S no</th>
+        <th>name</th>
+        <th>age</th>
+        <th>Can Vote?</th>
+    </tr>
+    {% for peoples in peoples %}
+    <tr>
+        <td>{{forloop.counter}}</td>
+        <td>{{peoples.name}}</td>
+        <td>{{peoples.age}}</td>
+        <td {% if peoples.age >= 18 %} style = "color:red" {% endif %}>
+            {% if peoples.age >= 18 %}
+            👍
+            {% else %}
+            👎
+            {% endif %}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+<p>
+    {{ text }}
+
+</p>
+
+<p>
+    {% if "cucumber" in vegetables %}
+    yes available
+    {% else %}
+    not available
+    {% endif %}
+</p>
+
+<a href="/about-us/">About Us</a>
+
+
+{% endblock %}
