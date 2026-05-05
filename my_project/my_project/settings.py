@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'first',
     'my_project',
+    'vegu',
 ]
 
 MIDDLEWARE = [

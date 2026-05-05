@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from first.views import first_fun, second_fun, contact, about_us
+from vegu.views import receipe
 
 
 urlpatterns = [
@@ -24,6 +25,7 @@ urlpatterns = [
     path('second/', second_fun, name='second_fun'),
     path('contact/', contact, name='Contact Us'),
     path('about-us/', about_us, name='about_us'),
+    path('receipe/', receipe, name='receipe'),
     path('admin/', admin.site.urls),
 
 ]
