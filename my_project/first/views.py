@@ -27,4 +27,4 @@ def contact(request):
 
 def about_us(request):
     context = {'page' : 'About Us'}
-    return render(request, "aboutus.html", context)
+    return render(request, "aboutus.html", context) 
